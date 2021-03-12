@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Untitled Form</title>
+        <link rel="stylesheet" type="text/css" href="/static/home/view.css" media="all">
+        <script type="text/javascript" src="/static/home/view.js"></script>
+        <script type="text/javascript" src="/static/home/calendar.js"></script>
+    </head>
+    <body id="main_body" >
+            <div id="form_container">
+                <form id="form_18480" class="appnitro"  method="post" action="{% url 'answers:get_answers' %}">
+                    <ul>
+                        <li id="li_14" >
+                            <label class="description" for="page">page </label>
+                            <div>
+                                <input id="page" name="page" class="element text medium" type="text" maxlength="255" value=""/>
+                            </div>
+                        </li>
+                        <li id="li_15" >
+                            <label class="description" for="page_size">pagesize  </label>
+                            <div>
+                                <input id="pagesize" name="pagesize" class="element text medium" type="text" maxlength="255" value=""/>
+                            </div>
+                        </li>
+                        <li id="li_1">
+                            <label class="description" for="element_1">startDate </label>
+                            <span>
+                                <input id="element_1_1" name="element_1_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+                                <label for="element_1_1">MM</label>
+                            </span>
+                            <span>
+                                <input id="element_1_2" name="element_1_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+                                <label for="element_1_2">DD</label>
+                            </span>
+                            <span>
+                                <input id="element_1_3" name="element_1_3" class="element text" size="4" maxlength="4" value="" type="text">
+                                <label for="element_1_3">YYYY</label>
+                            </span>
+                            <span id="calendar_1">
+                                <img id="cal_img_1" class="datepicker" src="calendar.gif" alt="P">	
+                            </span>
+                        </li>
+                        <li id="li_2">
+                            <label class="description" for="element_2">endDate </label>
+                            <span>
+                                <input id="element_2_1" name="element_2_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+                                <label for="element_2_1">MM</label>
+                            </span>
+                            <span>
+                                <input id="element_2_2" name="element_2_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+                                <label for="element_2_2">DD</label>
+                            </span>
+                            <span>
+                                <input id="element_2_3" name="element_2_3" class="element text" size="4" maxlength="4" value="" type="text">
+                                <label for="element_2_3">YYYY</label>
+                            </span>
+                            <span id="calendar_2">
+                                <img id="cal_img_2" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+                            </span>
+                        </li>
+                        <li id="li_16">
+                            <label class="description" for="element_16">Order </label>
+                            <div>
+                                <select class="element select medium" id="element_16" name="element_16">
+                                    <option value="" selected="selected"></option>
+                                    <option value="asc" >asc</option>
+                                    <option value="desc" >desc</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li id="li_3" >
+                            <label class="description" for="min">Minimum </label>
+                            <span>
+                                <input id="element_3_1" name="element_3_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+                                <label for="element_3_1">MM</label>
+                            </span>
+                            <span>
+                                <input id="element_3_2" name="element_3_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+                                <label for="element_3_2">DD</label>
+                            </span>
+                            <span>
+                                    <input id="element_3_3" name="element_3_3" class="element text" size="4" maxlength="4" value="" type="text">
+                                <label for="element_3_3">YYYY</label>
+                            </span>
+                            <span id="calendar_3">
+                                <img id="cal_img_3" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+                            </span>
+                        </li>
+                        <li id="li_4" >
+                            <label class="description" for="max">Maximum </label>
+                            <span>
+                                <input id="element_4_1" name="element_4_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+                                <label for="element_4_1">MM</label>
+                            </span>
+                            <span>
+                                <input id="element_4_2" name="element_4_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+                                <label for="element_4_2">DD</label>
+                            </span>
+                            <span>
+                                    <input id="element_4_3" name="element_4_3" class="element text" size="4" maxlength="4" value="" type="text">
+                                <label for="element_4_3">YYYY</label>
+                            </span>
+                            <span id="calendar_4">
+                                <img id="cal_img_4" class="datepicker" src="calendar.gif" alt="Pick a date.">	
+                            </span>
+                        </li>
+                        <li id="li_17" >
+                            <label class="description" for="sort">Sort </label>
+                            <div>
+                                <select class="element select medium" id="sort" name="sort">
+                                    <option value="" selected="selected"></option>
+                                    <option value="activity" >activity</option>
+                                    <option value="votes" >votes</option>
+                                    <option value="creation" >creation</option>
+                                    <option value="relevance" >relevance</option>
+                                </select>
+                            </div>
+                        </li>
+                    </li>
+			
+					<li class="buttons">
+                        <input type="hidden" name="form_id" value="18480" />
+                        <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+                    </li>
+                    </ul>
+                </form>
+            </div>
+    </body>
+    <script type="text/javascript">
+        Calendar.setup({
+        inputField	 : "element_1_3",
+        baseField    : "element_1",
+        displayArea  : "calendar_1",
+        button		 : "cal_img_1",
+        ifFormat	 : "%B %e, %Y",
+        onSelect	 : selectDate
+        });
+        Calendar.setup({
+			inputField	 : "element_2_3",
+			baseField    : "element_2",
+			displayArea  : "calendar_2",
+			button		 : "cal_img_2",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+        Calendar.setup({
+        inputField	 : "element_3_3",
+        baseField    : "element_3",
+        displayArea  : "calendar_3",
+        button		 : "cal_img_3",
+        ifFormat	 : "%B %e, %Y",
+        onSelect	 : selectDate
+        });
+        Calendar.setup({
+			inputField	 : "element_4_3",
+			baseField    : "element_4",
+			displayArea  : "calendar_4",
+			button		 : "cal_img_4",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+    </script>
+</html>

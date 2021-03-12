@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Quest</title>
+<link rel="stylesheet" type="text/css" href="/static/home/view.css" media="all">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script type="text/javascript" src="/static/home/view.js"></script>
+<script type="text/javascript" src="/static/home/calendar.js"></script>
+</head>
+<style>
+        .statscontainer {
+        margin-right: 16px;
+        width: 58px;
+        float: none;
+    }
+    .views {
+    padding-top: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+.statscontainer .views {
+    width: 58px;
+}
+.question-summary .stats, .question-summary .stats+.views {
+    margin-left: 100px;
+}
+.question-summary {
+    display: flex;
+    padding: 12px 8px;
+    float: none;
+    width: 100%;
+}
+.flush-left {
+    margin-left: -24px;
+    border-top: 1px solid var(--black-100);
+}
+.summary, .narrow .summary {
+    flex: 1 auto;
+    width: auto;
+    float: none;
+    margin: 0;
+    overflow: hidden;
+    margin-left: 100px;
+}
+.question-summary .excerpt {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+.summary h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: .5em;
+}
+.question-summary .question-hyperlink {
+    font-family: var(--theme-question-title-font-family);
+}
+.question-hyperlink:visited, .answer-hyperlink:visited {
+    color: var(--theme-question-title-color-visited);
+}
+.question-hyperlink, .answer-hyperlink {
+    color: var(--theme-question-title-color);
+    line-height: 1.3;
+    margin-bottom: 1.2em;
+}
+.question-hyperlink {
+    font-size: 16px;
+    font-weight: 400;
+}
+.started {
+    width: 200px;
+    /* float: right; */
+    line-height: 18px;
+}
+.user-info .user-gravatar32 {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border-radius: 1px;
+}
+.started .mod-flair, .started a:not(.started-link) {
+    font-size: 12px;
+    color: var(--theme-link-color);
+    margin-left: 19px;
+}
+.gravatar-wrapper-32, .gravatar-wrapper-32 img {
+    width: 32px;
+    height: 32px;
+}
+[class*="gravatar-wrapper-"] {
+    padding: 0;
+    overflow: hidden;
+}
+.started img {
+    vertical-align: baseline;
+}
+.gravatar-wrapper-32, .gravatar-wrapper-32 img {
+    width: 32px;
+    height: 32px;
+}
+.user-info .user-gravatar32+.user-details {
+    margin-left: 8px;
+    width: calc(100% - 40px);
+}
+span.step-links {
+    /* float: right; */
+    margin-left: 100px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+</style>
+<body>
+    <div class = 'container'>
+        <div id="questions" class="flush-left">
+            {% if content %}
+                {%for c in content%}
+                <div class = "question-summary">
+                    <div class = "statscontainer">
+                        <div class="stats">
+                            <div class = "vote"></div>
+                        </div>
+                        <div class="views" title="{{c.view_count}} views">{{c.view_count}} views</div>
+                    </div>
+                    <div class="summary">
+                        <h3>
+                            <a href="{{c.link}}">{{c.title}}</a>
+                        </h3>
+                        <div class="started fr">
+                            <div class="user-info">
+                                <div class="user-gravatar32">
+                                    <a href="{{c.owner.link}}">
+                                        <div class="gravatar-wrapper-32">
+                                            <img src="{{c.owner.profile_image}}" alt width="32" height="32" class="bar-sm">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="user-details">
+                                    <a href="{{c.owner.link}}">
+                                        {{c.owner.display_name}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+                {%endfor%}
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if content.has_previous %}
+                            <a href="{{request.get_full_path}}&django_page={{ content.previous_page_number }}">previous</a>
+                        {% endif %}
+                
+                        <span class="current">
+                            Page {{ content.number }} of {{ content.paginator.num_pages }}.
+                        </span>
+                
+                        {% if content.has_next %}
+                            <a href="{{request.get_full_path}}&django_page={{ content.next_page_number }}">next</a>
+                        {% endif %}
+                    </span>
+                </div>
+                {% else %}
+                <div>
+                    <p>No records to display</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

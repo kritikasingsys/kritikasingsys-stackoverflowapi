@@ -1,0 +1,249 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Untitled Form</title>
+	<link rel="stylesheet" type="text/css" href="/static/home/view.css" media="all">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="https://resources/demos/style.css">
+	<script type="text/javascript" src="/static/home/view.js"></script>
+	<script type="text/javascript" src="/static/home/calendar.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body id="main_body">
+
+	<img id="top" src="top.png" alt="">
+	<div id="form_container">
+
+		<form id="form_18480" class="appnitro" method="GET" action="{% url 'home:stack_search' %}">
+			<div class="form_description">
+			</div>
+			<ul>
+
+				<li id="li_1">
+					<p for="fromdate">fromdate: <input type = "text" id="calfromdate">
+						<input type="hidden" id="fromdate" value="" name="fromdate">
+					</p>
+
+				</li>
+				<li id="li_2">
+					<p>todate: <input type = "text" id="caltodate">
+						<input type="hidden" id="todate" value="" name="todate">
+					</script>
+
+				</li>
+				<li id="li_16">
+					<label class="description" for="element_16">Order </label>
+					<div>
+						<select class="element select medium" id="element_16" name="element_16">
+							<option value="" selected="selected"></option>
+							<option value="asc">asc</option>
+							<option value="desc">desc</option>
+						</select>
+					</div>
+				</li>
+				<li id="li_3">
+						<p>min: <input type = "text" id="calmin">
+							<input type="hidden" id="min" value="" name="min">
+						</script>
+				</li>
+				<li id="li_4">
+						<p>max: <input type = "text" id="calmax">
+							<input type="hidden" id="max" value="" name="max">
+						</script>
+				</li>
+				<li id="li_17">
+					<label class="description" for="sort">Sort </label>
+					<div>
+						<select class="element select medium" id="sort" name="sort">
+							<option value="" selected="selected"></option>
+							<option value="activity">activity</option>
+							<option value="votes">votes</option>
+							<option value="creation">creation</option>
+							<option value="relevance">relevance</option>
+						</select>
+					</div>
+				</li>
+				<li id="li_5">
+					<label class="description" for="q">q </label>
+					<div>
+						<input id="q" name="q" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+				<li id="q_li">
+					<label class="description" for="accepted">accepted </label>
+					<div>
+						<select class="element select medium" id="accepted" name="accepted">
+							<option value="" selected="selected"></option>
+							<option value="True">True</option>
+							<option value="False">False</option>
+
+						</select>
+					</div>
+				</li>
+				<li id="li_6">
+					<label class="description" for="answers">answers </label>
+					<div>
+						<textarea id="answers" name="answers" class="element textarea medium"></textarea>
+					</div>
+				</li>
+				<li id="li_7">
+					<label class="description" for="body">body </label>
+					<div>
+						<input id="body" name="body" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+				<li id="li_19">
+					<label class="description" for="closed">Closed </label>
+					<div>
+						<select class="element select medium" id="closed" name="closed">
+							<option value="" selected="selected"></option>
+							<option value="True">True</option>
+							<option value="False">False</option>
+
+						</select>
+					</div>
+				</li>
+				<li id="li_20">
+					<label class="description" for="migrated">Migrated </label>
+					<div>
+						<select class="element select medium" id="migrated" name="migrated">
+							<option value="" selected="selected"></option>
+							<option value="True">True</option>
+							<option value="False">False</option>
+
+						</select>
+					</div>
+				</li>
+				<li id="li_21">
+					<label class="description" for="notice">notice </label>
+					<div>
+						<select class="element select medium" id="notice" name="notice">
+							<option value="" selected="selected"></option>
+							<option value="True">True</option>
+							<option value="False">False</option>
+
+						</select>
+					</div>
+				</li>
+				<li id="li_8">
+					<label class="description" for="nottagged">nottagged </label>
+					<div>
+						<input id="nottagged" name="nottagged" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+				<li id="li_9">
+					<label class="description" for="tagged">tagged </label>
+					<div>
+						<input id="tagged" name="tagged" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+				<li id="li_10">
+					<label class="description" for="title">title </label>
+					<div>
+						<input id="title" name="title" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+				<li id="li_11">
+					<label class="description" for="user">user </label>
+					<div>
+						<input id="user" name="user" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+				<li id="li_12">
+					<label class="description" for="url">url </label>
+					<div>
+						<input id="url" name="url" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+				<li id="li_13">
+					<label class="description" for="views">views </label>
+					<div>
+						<textarea id="views" name="views" class="element textarea medium"></textarea>
+					</div>
+				</li>
+				<li id="li_22">
+					<label class="description" for="wiki">wiki </label>
+					<div>
+						<select class="element select medium" id="wiki" name="wiki">
+							<option value="" selected="selected"></option>
+							<option value="1">True</option>
+							<option value="2">False</option>
+
+						</select>
+					</div>
+				</li>
+				<li id="li_14">
+					<label class="description" for="page">page </label>
+					<div>
+						<input id="page" name="page" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+				<li id="li_15">
+					<label class="description" for="page_size">pagesize </label>
+					<div>
+						<input id="page_size" name="page_size" class="element text medium" type="text" maxlength="255" value="" />
+					</div>
+				</li>
+
+				<li class="buttons">
+					<input type="hidden" name="form_id" value="18480" />
+
+					<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+				</li>
+			</ul>
+		</form>
+	</div>
+	<img id="bottom" src="bottom.png" alt="">
+	<script type="text/javascript">
+		$(function () {
+			$("#calfromdate").datepicker(
+			{
+					dateFormat: 'yy/mm/dd',
+					 onSelect: function (date) {
+						 console.log(this)
+						 ac = $.datepicker.formatDate('@', new Date(date));
+						 $('#fromdate').val(ac/1000);
+
+						console.log(ac/1000);
+					},
+				});
+			$("#caltodate").datepicker({
+					dateFormat: 'yy/mm/dd',
+					 onSelect: function (date) {
+						 console.log(this)
+						 ac = $.datepicker.formatDate('@', new Date(date));
+						 $('#todate').val(ac/1000);
+
+						console.log(ac/1000);
+					},
+				});
+			$("#calmin").datepicker({
+					dateFormat: 'yy/mm/dd',
+					 onSelect: function (date) {
+						 console.log(this)
+						 ac = $.datepicker.formatDate('@', new Date(date));
+						 $('#min').val(ac/1000);
+
+						console.log(ac/1000);
+					},
+				});
+				$("#calmax").datepicker({
+					dateFormat: 'yy/mm/dd',
+					 onSelect: function (date) {
+						 console.log(this)
+						 ac = $.datepicker.formatDate('@', new Date(date));
+						 $('#max').val(ac/1000);
+
+						console.log(ac/1000);
+					},
+				})
+		});
+	</script>
+</body>
+
+</html>
